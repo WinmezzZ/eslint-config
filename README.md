@@ -2,7 +2,7 @@
 
 #### An ESLint [Shareable Config](http://eslint.org/docs/developer-guide/shareable-configs) for Typescript React Base Style with Prettier.
 
-## Install
+### Install
 
 This module is for advanced users. You probably want to use `react-base` instead :)
 
@@ -10,7 +10,7 @@ This module is for advanced users. You probably want to use `react-base` instead
 npm install @winme/eslint-config-react-base -D
 ```
 
-## Usage
+### Usage
 
 Shareable configs are designed to work with the `extends` feature of `.eslintrc` files.
 You can learn more about
@@ -29,12 +29,13 @@ You can override settings from the shareable config by adding them directly into
 `.eslintrc` file.
 
 ### Features
-1. Eslint
-2. Typescript
-3. React
-4. Prettier
+- **ESLint**: ✅
+- **TypeScript** ✅
+- **React**: ✅
+- **Prettier**: ✅
 
 
-## License
+
+### License
 
 MIT. Copyright (c) eslint-config-react-base.
