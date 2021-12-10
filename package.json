@@ -1,7 +1,7 @@
 {
   "name": "@winme/eslint-config-react-base",
   "description": "Eslint Typescript React Standard Style",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"

@@ -34,7 +34,8 @@ Then, add this to your `.eslintrc` file:
 You can override settings from the shareable config by adding them directly into your
 `.eslintrc` file.
 
-For auto fix problem, strongly recommanded you add below options into .vscode/settings.json at root of directory;
+For auto fix problem, strongly recommanded you add below options into `.vscode/settings.json` at root of directory;
+
 ```json
 {
   "typescript.tsdk": "node_modules/typescript/lib",
@@ -61,6 +62,13 @@ For auto fix problem, strongly recommanded you add below options into .vscode/se
 }
 ```
 
+For global lint/format, add below scripts in `package.json`
+```json
+"scripts": {
+  "lint": "eslint . --ext js,ts,tsx",
+  "format": "prettier --write **/*.{js,ts,tsx} && eslint . --ext js,ts,tsx --fix"
+}
+```
 
 ### License
 
