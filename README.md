@@ -2,6 +2,12 @@
 
 #### An ESLint [Shareable Config](http://eslint.org/docs/developer-guide/shareable-configs) for Typescript React Base Style with Prettier.
 
+### Features
+- **ESLint**: ✅
+- **TypeScript** ✅
+- **React**: ✅
+- **Prettier**: ✅
+
 ### Install
 
 This module is for advanced users. You probably want to use `react-base` instead :)
@@ -28,12 +34,32 @@ Then, add this to your `.eslintrc` file:
 You can override settings from the shareable config by adding them directly into your
 `.eslintrc` file.
 
-### Features
-- **ESLint**: ✅
-- **TypeScript** ✅
-- **React**: ✅
-- **Prettier**: ✅
-
+For auto fix problem, strongly recommanded you add below options into .vscode/settings.json at root of directory;
+```json
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx"]
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false
+  }
+}
+```
 
 
 ### License
