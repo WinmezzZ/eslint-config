@@ -1,0 +1,35 @@
+{
+  "name": "eslint-config-standard",
+  "description": "Eslint Typescript React Standard Style",
+  "version": "16.0.3",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": {
+    "name": "Winme",
+    "email": "winme0308@gmail.com"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint && tape test/*.js"
+  },
+  "bugs": {
+    "url": "https://github.com/WinmezzZ/eslint-config-react-base.git/issues"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/WinmezzZ/eslint-config-react-base.git"
+  },
+  "homepage": "https://github.com/WinmezzZ/eslint-config-react-base.git",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1"
+  }
+}
