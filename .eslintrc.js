@@ -71,7 +71,9 @@ module.exports = {
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
-    "prettier/prettier": ["warn"]
+    "prettier/prettier": ["warn", prettierConfig, {
+      "usePrettierrc": false
+    }]
   },
 };
 
