@@ -1,3 +1,5 @@
+const prettierConfig = require('./.prettierrc.js')
+
 const newLineItem = [
   'break',
   'case',
@@ -69,19 +71,9 @@ module.exports = {
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
-    "prettier/prettier": ["warn", {
-      "printWidth": 120,
-      "tabWidth": 2,
-      "useTabs": false,
-      "singleQuote": true,
-      "semi": true,
-      "trailingComma": "all",
-      "bracketSpacing": true,
-      "jsxBracketSameLine": false,
-      "arrowParens": "avoid",
-      "endOfLine": "auto"
-    }, {
+    "prettier/prettier": ["warn", prettierConfig, {
       "usePrettierrc": false
     }]
   },
 };
+
