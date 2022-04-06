@@ -62,6 +62,11 @@ For auto fix problem, strongly recommanded you add below options into `.vscode/s
 }
 ```
 
+For `prettier` autofix, add below prettier config in `.prettirrc.js`
+```js
+module.exports = require('@winme/eslint-config-react-base').prettier;
+```
+
 For global lint/format, add below scripts in `package.json`
 ```json
 "scripts": {
