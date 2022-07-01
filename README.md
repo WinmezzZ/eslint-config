@@ -27,7 +27,7 @@ Then, add this to your `.eslintrc` file:
 
 ```
 {
-  "extends": "@winme/eslint-config-react-base"
+  "extends": ["@winme/eslint-config-react-base"]
 }
 ```
 
