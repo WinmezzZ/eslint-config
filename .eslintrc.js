@@ -1,79 +1,44 @@
-const prettierConfig = require('./.prettierrc.js')
-
-const newLineItem = [
-  'break',
-  'case',
-  'cjs-export',
-  'cjs-import',
-  'class',
-  'continue',
-  'debugger',
-  'default',
-  'directive',
-  'do',
-  'empty',
-  'export',
-  'for',
-  'function',
-  'iife',
-  'switch',
-  'throw',
-  'try',
-  'var',
-  'while',
-  'with',
-  'import',
-];
-
-const afterNewLineItem = [...newLineItem];
-
-const beforeNewLineItem = ['return', ...newLineItem];
-
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-    node: true,
-  },
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 2020,
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
-  settings: {
-    react: {
-      pragma: 'React',
-      version: 'detect',
-    },
   },
   parser: '@typescript-eslint/parser',
-  extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended', 'prettier'],
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports'],
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'newline-after-var': [2, 'always'],
-    'padding-line-between-statements': [
-      2,
-      { blankLine: 'always', prev: '*', next: beforeNewLineItem },
-      { blankLine: 'always', prev: afterNewLineItem, next: '*' },
-      { blankLine: 'any', prev: afterNewLineItem, next: afterNewLineItem },
-    ],
-    '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/camelcase': 'off',
-    '@typescript-eslint/explicit-member-accessibility': 'off',
-    '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
-    "prettier/prettier": ["warn", prettierConfig, {
-      "usePrettierrc": false
-    }]
+    '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    'prettier/prettier': ['warn'],
+    'simple-import-sort/imports': [
+      'warn',
+      {
+        groups: [['^.*\\u0000$'], ['^\\u0000'], ['^@?\\w'], ['^'], ['^\\.']],
+      },
+    ],
+    'simple-import-sort/exports': 'warn',
+    'newline-after-var': 'warn',
+    'lines-between-class-members': 'warn',
+    'prefer-spread': 'off',
+    'padding-line-between-statements': [
+      'warn',
+      { blankLine: 'always', prev: '*', next: 'block' },
+      { blankLine: 'always', prev: 'block', next: '*' },
+      { blankLine: 'always', prev: '*', next: 'block-like' },
+      { blankLine: 'always', prev: 'block-like', next: '*' },
+      { blankLine: 'always', prev: '*', next: 'return' },
+    ],
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
+    ],
   },
 };
-

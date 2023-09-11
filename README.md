@@ -1,4 +1,4 @@
-# eslint-config-react-base
+# eslint-config
 
 #### An ESLint [Shareable Config](http://eslint.org/docs/developer-guide/shareable-configs) for Typescript React Base Style with Prettier.
 
@@ -13,7 +13,7 @@
 This module is for advanced users. You probably want to use `react-base` instead :)
 
 ```bash
-npm install @winme/eslint-config-react-base -D
+npm install @winme/eslint-config -D
 ```
 
 ### Usage
@@ -27,7 +27,7 @@ Then, add this to your `.eslintrc` file:
 
 ```
 {
-  "extends": ["@winme/eslint-config-react-base"]
+  "extends": ["@winme/eslint-config"]
 }
 ```
 
@@ -64,7 +64,7 @@ For auto fix problem, strongly recommanded you add below options into `.vscode/s
 
 For `prettier` autofix, add below prettier config in `.prettirrc.js`
 ```js
-module.exports = require('@winme/eslint-config-react-base').prettier;
+module.exports = require('@winme/eslint-config').prettier;
 ```
 
 For global lint/format, add below scripts in `package.json`
@@ -77,4 +77,4 @@ For global lint/format, add below scripts in `package.json`
 
 ### License
 
-MIT. Copyright (c) eslint-config-react-base.
+MIT. Copyright (c) eslint-config.
