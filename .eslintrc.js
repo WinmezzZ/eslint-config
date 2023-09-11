@@ -2,6 +2,10 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 2020,
+    ecmaFeature: {
+      modules: true,
+      jsx: true,
+    }
   },
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports'],
@@ -16,7 +20,17 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
-    'prettier/prettier': ['warn'],
+    'prettier/prettier': ['warn', {
+      "printWidth": 120,
+      "tabWidth": 2,
+      "useTabs": false,
+      "singleQuote": true,
+      "semi": true,
+      "trailingComma": "all",
+      "bracketSpacing": true,
+      "arrowParens": "avoid",
+      "endOfLine": "auto"
+    }],
     'simple-import-sort/imports': [
       'warn',
       {

@@ -62,16 +62,11 @@ For auto fix problem, strongly recommanded you add below options into `.vscode/s
 }
 ```
 
-For `prettier` autofix, add below prettier config in `.prettirrc.js`
-```js
-module.exports = require('@winme/eslint-config').prettier;
-```
-
 For global lint/format, add below scripts in `package.json`
 ```json
 "scripts": {
   "lint": "eslint . --ext js,ts,tsx",
-  "format": "prettier --write **/*.{js,ts,tsx} && eslint . --ext js,ts,tsx --fix"
+  "format": "eslint . --ext js,ts,tsx --fix"
 }
 ```
 
